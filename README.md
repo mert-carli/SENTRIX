@@ -50,7 +50,7 @@ The interface fully supports seamless switching between English and Turkish lang
 ## Installation Instructions
 
 1. Clone the repository to your local machine:
-   git clone https://github.com/yourusername/Sentrix.git
+   git clone https://github.com/mert-carli/Sentrix.git
    cd Sentrix
 
 2. Install the required dependencies using pip:
