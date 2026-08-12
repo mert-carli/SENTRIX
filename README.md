@@ -1,59 +1,73 @@
-# NetworkOS: Advanced Security & Reconnaissance Dashboard
+# Sentrix
 
-NetworkOS is a comprehensive, cyberpunk-themed network analysis and security reconnaissance tool. Built with Python and `customtkinter`, it serves as a central command dashboard for monitoring network health, hunting threats, and performing OSINT.
+Sentrix is an advanced network analysis and security reconnaissance application developed in Python. It provides a comprehensive command dashboard for network diagnostics, threat hunting, and open-source intelligence (OSINT). Designed with a dark, professional interface using the CustomTkinter library, Sentrix is tailored for network administrators, security auditors, and cybersecurity enthusiasts.
 
-![Interface Screenshot](https://raw.githubusercontent.com/user/NetworkOS/main/assets/screenshot.png) *(You can add a screenshot here later)*
+## Core Capabilities
 
-## Features
+### 1. Diagnostic Tools
+Sentrix includes a robust set of tools for everyday network troubleshooting:
+*   Ping and Traceroute for latency and routing path analysis.
+*   NSLookup for domain name system resolution.
+*   HTTP and SSL validation tools to check the security configuration of web services.
+*   General internet connectivity checks to ensure baseline access.
 
-- **Diagnostic Tools**: Ping, Traceroute, NSLookup, HTTP/SSL validation, and Internet connectivity checks.
-- **Wi-Fi Analyzer**: Scan and dump local Wi-Fi networks, view current active profiles, and perform BSSID/Auth analysis.
-- **Reconnaissance (OSINT)**:
-  - **Host Discovery**: Ping sweeps and latency checks.
-  - **DNS Recon**: Retrieve A, AAAA, MX, and TXT records.
-  - **Domain Info**: Perform WHOIS/RDAP lookups for IP geolocation and ISP info.
-  - **Service Detection**: Perform banner grabbing on common ports.
-  - **Route Analysis**: Visual trace routing to targets.
-  - **Local Map**: ASCII-based topology generation using ARP data.
-- **Threat Hunter**: 
-  - Anomaly detection based on active connection baseline building.
-  - ARP spoofing monitor.
-  - Real-time connection matrix filters (SYN-SENT, ESTABLISHED).
-- **Security Audit**: Scans Windows Temp and Downloads folders for potentially risky executables (`.exe`, `.dll`, `.bat`).
-- **Export & Reports**: Export raw logs and generate automated Markdown (`.md`) security summary reports.
-- **Multilingual Support**: Switch seamlessly between English and Turkish (TR/EN).
+### 2. Wi-Fi Analysis
+The application offers detailed Wi-Fi scanning capabilities. It can discover local Wi-Fi networks, extract active network profiles, and perform in-depth analysis on BSSID (Basic Service Set Identifier) and authentication protocols.
 
-## Requirements
+### 3. Open-Source Intelligence (OSINT) and Reconnaissance
+Sentrix automates information gathering processes:
+*   **Host Discovery:** Perform ping sweeps to identify live hosts on the local network.
+*   **DNS Reconnaissance:** Retrieve specific DNS records including A, AAAA, MX, and TXT records.
+*   **Domain Information:** Execute WHOIS and RDAP lookups to determine IP geolocation and Internet Service Provider (ISP) details.
+*   **Service Detection:** Perform banner grabbing on common ports to identify running services.
+*   **Visual Topology:** Generate an ASCII-based local network map utilizing ARP data.
 
-- **OS:** Windows (uses native tools like `netsh`, `wevtutil`, `tracert`, `arp`)
-- **Python:** 3.8+
-- **Libraries:** 
-  - `customtkinter` (for the modern GUI)
-  - `pillow` (for optional image handling in ctk)
+### 4. Threat Hunting
+Proactive security features allow users to monitor their environment:
+*   Build a baseline of active connections to detect anomalous network behavior.
+*   Monitor for ARP spoofing attacks in real-time.
+*   Filter connection matrices specifically for SYN-SENT and ESTABLISHED states to track active and pending connections.
 
-## Installation
+### 5. Security Auditing
+The tool scans sensitive local directories (such as the Windows Temp and Downloads folders) for potentially risky executables, including .exe, .dll, and .bat files, helping to identify unauthorized or suspicious software.
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/NetworkOS.git
-   cd NetworkOS
-   ```
-2. Install the required Python packages:
-   ```bash
+### 6. Reporting and Export
+Sentrix provides the ability to export raw logs and automatically generate structured security summary reports in Markdown format, facilitating documentation and sharing of findings.
+
+### 7. Localization
+The interface fully supports seamless switching between English and Turkish languages.
+
+## Technical Requirements
+
+*   **Operating System:** Windows (relies on native Windows networking tools such as netsh, wevtutil, tracert, and arp).
+*   **Python Version:** Python 3.8 or newer.
+*   **Dependencies:**
+    *   `customtkinter` (for the graphical user interface)
+    *   `pillow` (for handling image assets)
+    *   `psutil`
+    *   `requests`
+
+## Installation Instructions
+
+1. Clone the repository to your local machine:
+   git clone https://github.com/yourusername/Sentrix.git
+   cd Sentrix
+
+2. Install the required dependencies using pip:
    pip install -r requirements.txt
-   ```
 
-## Usage
+## Execution Instructions
 
-Run the main application:
-```bash
+To launch the Sentrix application, execute the following command in your terminal:
+
 python main.py
-```
 
-*Note: Some features like advanced threat hunting and ARP monitoring may require running the application as an Administrator for full access to Windows networking APIs.*
+Note: Certain advanced features, such as threat hunting and ARP monitoring, require full access to Windows networking APIs. It is highly recommended to run the application with Administrator privileges to utilize these features fully.
 
 ## Disclaimer
-This tool is designed for educational purposes, network administration, and authorized security auditing only. The developers are not responsible for any misuse.
+
+Sentrix is developed strictly for educational purposes, authorized network administration, and lawful security auditing. The developers assume no responsibility for any unauthorized or malicious use of this tool.
 
 ## License
-MIT License
+
+This project is licensed under the MIT License.
