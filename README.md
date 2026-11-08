@@ -47,7 +47,7 @@ All modules listed below are implemented in [`modules/`](./modules) and exposed 
 
 ```mermaid
 flowchart TD
-    UI["UI Layer (CustomTkinter)\nmain.py & ui/views/* (21 Workspace Views)"]
+    UI["UI Layer (CustomTkinter)\nmain.py & ui/views/* (23 Workspace Views)"]
     Core["Core Engine (core/)\nEventBus · TaskManager · ScopeValidator · Permission · Translations"]
     DB[("SQLite Database (WAL Mode)\ndata/sentrix.db (32 Tables)")]
     Mods["Security & Network Modules (modules/*)"]
@@ -65,7 +65,7 @@ flowchart TD
 ```text
 SENTRIX/
 ├── core/                       # Core infrastructure (SQLite WAL DB, EventBus, Scope, TaskManager, i18n)
-├── modules/                    # 34 modular domain engines
+├── modules/                    # 40 modular domain engines (representative selection shown below)
 │   ├── active_directory/       # AD ACL, LDAP & attack path analysis
 │   ├── ai_security/            # Local AI Security Copilot, ContextBuilder & ActionGuard
 │   ├── artifact_timeline/      # Prefetch, Shimcache & SRUM timeline parsers
@@ -87,7 +87,7 @@ SENTRIX/
 │   ├── windows_internals/      # Process, Service, Registry & EventLog collectors
 │   └── wireless/               # Windows netsh Wi-Fi scanner & channel analyzer
 ├── ui/
-│   └── views/                  # 21 CustomTkinter workspace views & shared theme components
+│   └── views/                  # 23 CustomTkinter workspace views & shared theme components
 ├── tests/                      # Automated unittest suites (v3, v4, and v5 engines)
 ├── docs/                       # Versioned architecture, audit, and user guides (v3, v4, v5)
 ├── data/                       # Runtime SQLite database, audit logs & quarantine directory
