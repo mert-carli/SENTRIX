@@ -1,0 +1,5 @@
+from modules.supply_chain.dependency_scanner import DependencyScanner
+from modules.supply_chain.sbom_engine import SBOMEngine
+from modules.supply_chain.osv_client import OSVClient
+from modules.supply_chain.license_analyzer import LicenseAnalyzer
+from modules.supply_chain.signature_verifier import AuthenticodeVerifier

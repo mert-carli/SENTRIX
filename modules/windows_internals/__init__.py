@@ -1,0 +1,7 @@
+from modules.windows_internals.event_normalizer import EventNormalizer
+from modules.windows_internals.eventlog_collector import EventLogCollector
+from modules.windows_internals.sysmon_collector import SysmonCollector
+from modules.windows_internals.etw_collector import ETWCollector
+from modules.windows_internals.process_monitor import ProcessMonitor
+from modules.windows_internals.registry_monitor import RegistryMonitor
+from modules.windows_internals.service_monitor import ServiceMonitor
